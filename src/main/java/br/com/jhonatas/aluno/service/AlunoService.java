@@ -22,14 +22,15 @@ public class AlunoService {
         return aluno;
     }
 
-    public List<Aluno> findAll(){
-        return alunoRepository.findAll();
-    }
-
     public Aluno create (Aluno aluno){
         aluno.setId(null);
         return alunoRepository.save(aluno);
     }
+
+    public List<Aluno> findAll(){
+        return alunoRepository.findAll();
+    }
+
 
     public void delete (Integer id) throws AlunoNotFoundException {
         verifyIfExists(id);
