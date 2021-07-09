@@ -19,7 +19,7 @@ public class AlunoService {
 
     public Aluno findById(Integer id) throws AlunoNotFoundException {
         Aluno aluno = verifyIfExists(id);
-        return alunos.get(id);
+        return aluno;
     }
 
     public List<Aluno> findAll(){
@@ -38,7 +38,7 @@ public class AlunoService {
 
     public Aluno updateById(Integer id, Aluno aluno) throws AlunoNotFoundException {
         verifyIfExists(id);
-        aluno.setId(null);
+        aluno.setId(id);
         return alunoRepository.save(aluno);
     }
 

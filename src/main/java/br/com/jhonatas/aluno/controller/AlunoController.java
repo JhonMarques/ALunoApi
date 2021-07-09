@@ -16,26 +16,29 @@ public class AlunoController {
 
     private AlunoService alunoService;
 
-    @PostMapping
+
     @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping(value = "/novo")
     public Aluno create(@RequestBody Aluno aluno) {
         return alunoService.create(aluno);
     }
 
-    @GetMapping
-    public List<Aluno> listAll() {return alunoService.findAll();}
+    @GetMapping(value = "/listarTodos")
+    public List<Aluno> listAll() {
+        return alunoService.findAll();
+    }
 
-    @GetMapping("/{id}")
+    @GetMapping(value = "/procurarPorId/{id}")
     public Aluno findById(@PathVariable Integer id) throws AlunoNotFoundException {
         return alunoService.findById(id);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping(value = "/atualizarAluno/{id}")
     public Aluno updateById(@PathVariable Integer id, @RequestBody Aluno aluno) throws AlunoNotFoundException {
         return alunoService.updateById(id, aluno);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping(value = "/deletar/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void DeleteById(@PathVariable Integer id) throws AlunoNotFoundException {
         alunoService.delete(id);
