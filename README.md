@@ -4,11 +4,15 @@ https://www.getpostman.com/collections/3ceb08f62c055ecf9625
 
 ### Link para acesso no Heroku utilizando Swagger: 
 
-https://api-aluno-v1.herokuapp.com/swagger-ui.html
+https://api-aluno-v1.herokuapp.com/swagger-ui.html#/aluno45controller
 
-Url para conexão com o h2. http://localhost:8000/h2-console
+### Url para conexão com o h2:
 
-JDBC URL : jdbc:h2:mem:testdb username: sa
+http://localhost:8000/h2-console
+
+### JDBC URL : 
+
+jdbc:h2:mem:testdb username: sa
 
 
 Contato: (18) 99680-1054 
